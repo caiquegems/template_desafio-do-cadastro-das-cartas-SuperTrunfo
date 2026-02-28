@@ -80,7 +80,7 @@ int main (){
         repotu = turist1 > turist2;
         redepo = dpopu1 < dpopu2;
         repibc = pibc1 > pibc2;
-        resuper = (pop1+pib1+area1+pibc1+(1/dpopu1))>(pop2+pib2+area2+pibc2+(1/dpopu2))
+        resuper = (pop1+pib1+area1+pibc1+(1/dpopu1))>(pop2+pib2+area2+pibc2+(1/dpopu2));
 
 
 
@@ -139,8 +139,8 @@ int main (){
  printf("------------------------ \n");
      //atributo pib per capital
      printf("Atributo: Pib Per Capital\n");
-    printf("Carta 1 - %s (%s): %.2f Reais",cidade1,cod1,pibc1);
-    printf("Carta 2 - %s (%s): %.2f Reais",cidade2,cod2,pibc2);
+    printf("Carta 1 - %s (%s): %.2f Reais\n",cidade1,cod1,pibc1);
+    printf("Carta 2 - %s (%s): %.2f Reais\n",cidade2,cod2,pibc2);
     if(repibc==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
     else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
  printf("------------------------ \n");
