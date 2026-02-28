@@ -72,6 +72,7 @@ int main (){
         int repotu;
         int redepo;
         int repibc;
+        int resuper;
 
         repop = pop1 > pop2;
         reare = area1 > area2;
@@ -79,6 +80,7 @@ int main (){
         repotu = turist1 > turist2;
         redepo = dpopu1 < dpopu2;
         repibc = pibc1 > pibc2;
+        resuper = (pop1+pib1+area1+pibc1+(1/dpopu1))>(pop2+pib2+area2+pibc2+(1/dpopu2))
 
 
 
@@ -107,16 +109,57 @@ int main (){
        printf("Densidade Populacional: %.2f hab/km²\n", dpopu2);
        printf("PIB per Capita: %.2f reais\n", pibc2);
     printf("------------------------ \n");
-          printf("****COMPARAÇÃO DE PODER ENTRE AS CARTAS****\n");
-          printf("O VENCEDOR E DICIDIDO PELOS NUMERROS 1 PARA CARTA 1, 0 PARA CARTA 2\n");
-          printf("POPULAÇÃO: %D\n",repop);
-          printf("ÁREA:%d\n", reare);
-          printf("PIB:%d\n", repib);
-          printf("PONTOS TURISTICOS:%d\n", repotu);
-          printf("PIB PER CAPITAL:%d\n",repibc );
-           printf("SUPER PODER: %d\n", (pop1+pib1+area1+pibc1+(1/dpopu1))>(pop2+pib2+area2+pibc2+(1/dpopu2)) );
-    printf("------------------------ \n");
-
+ //atributo populaçao
+    printf("Atributo: população\n");
+    printf("Carta 1 - %s (%s): %lu Hab\n",cidade1,cod1,pop1);
+    printf("Carta 2 - %s (%s): %lu Hab\n",cidade2,cod2,pop2);
+    if(repop==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+ printf("------------------------ \n");
+    //atributo área
+    printf("Atributo: Área\n");
+    printf("Carta 1 - %s (%s): %f km\n",cidade1,cod1,area1);
+    printf("Carta 2 - %s (%s): %f km \n",cidade2,cod2,area2);
+    if(reare==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+ printf("------------------------ \n");
+    //atributo pib
+    printf("Atributo: Pib\n");
+    printf("Carta 1 - %s (%s): %.2f bilhões de Reais\n ",cidade1,cod1,pib1);
+    printf("Carta 2 - %s (%s): %.2f bilhões de Reais\n",cidade2,cod2,pib2);
+    if(repib==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+ printf("------------------------ \n");
+    //atributo pontos turisticos
+    printf("Atributo: Pontos Turisticos\n");
+    printf("Carta 1 - %s (%s): %d\n",cidade1,cod1,turist1);
+    printf("Carta 2 - %s (%s): %d\n",cidade2,cod2,turist2);
+    if(repotu==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+ printf("------------------------ \n");
+     //atributo pib per capital
+     printf("Atributo: Pib Per Capital\n");
+    printf("Carta 1 - %s (%s): %.2f Reais",cidade1,cod1,pibc1);
+    printf("Carta 2 - %s (%s): %.2f Reais",cidade2,cod2,pibc2);
+    if(repibc==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+ printf("------------------------ \n");
+    //atributo densidade populacional
+     printf("Atributo: Densidade Populacinal\n");
+    printf("Carta 1 - %s (%s): %.2f hab/km²\n",cidade1,cod1,dpopu1);
+    printf("Carta 2 - %s (%s): %.2f hab/km²\n",cidade2,cod2,dpopu2);
+    if(redepo==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+ printf("------------------------ \n");
+     //atributo super poder
+     printf("Atributo: Super Poder\n");
+    printf("Carta 1 - %s (%s): %.2f poder\n",cidade1,cod1,pop1+pib1+area1+pibc1+(1/dpopu1));
+    printf("Carta 2 - %s (%s): %.2f poder\n",cidade2,cod2,pop2+pib2+area2+pibc2+(1/dpopu2));
+    if(resuper==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+           
+          printf("------------------------ \n");
+    
 
 return(0);
        
