@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
 int main (){
 
@@ -9,6 +11,7 @@ int main (){
     float area1, area2;
     float pib1, pib2;
     int turist1, turist2;
+    int escolhadeatributo;
 
        printf("BEM VINDO AO SUPER TRUNFO\n");
        printf("COMEÇE REGISTRANDO SUAS CARTAS:\n");
@@ -65,7 +68,7 @@ int main (){
         dpopu2 = pop2 / area2;
         pibc1 =  pib1 / pop1;
         pibc2 =  pib2 / pop2;
-
+        
         int repop;
         int reare;
         int repib;
@@ -73,7 +76,7 @@ int main (){
         int redepo;
         int repibc;
         int resuper;
-
+    
         repop = pop1 > pop2;
         reare = area1 > area2;
         repib = pib1 > pib2;
@@ -109,58 +112,116 @@ int main (){
        printf("Densidade Populacional: %.2f hab/km²\n", dpopu2);
        printf("PIB per Capita: %.2f reais\n", pibc2);
     printf("------------------------ \n");
- //atributo populaçao
+    //escolha de atributos
+ printf("Esta na Hora de escolhe o meio de vitoria\n");
+ printf("1. População\n");
+ printf("2. Área\n");
+ printf("3. PIB");
+ printf("4. Pontos Turisticos\n");
+ printf("5. PIB Per Capital\n");
+ printf("6. Densidade Populasional\n");
+ printf("6. Super Poder\n");
+ printf("Qual a sua escolha?\n");
+ scanf("%d", &escolhadeatributo);
+
+ printf("------------------------ \n");
+
+ switch (escolhadeatributo)
+ {
+case 1:
+    //atributo populaçao
     printf("Atributo: população\n");
     printf("Carta 1 - %s (%s): %lu Hab\n",cidade1,cod1,pop1);
     printf("Carta 2 - %s (%s): %lu Hab\n",cidade2,cod2,pop2);
     if(repop==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
- printf("------------------------ \n");
+    else if (repop==0)
+    {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+    else {
+     printf("Resultado: Empate");
+     break;
+ case 2:
+    
     //atributo área
     printf("Atributo: Área\n");
     printf("Carta 1 - %s (%s): %f km\n",cidade1,cod1,area1);
     printf("Carta 2 - %s (%s): %f km \n",cidade2,cod2,area2);
     if(reare==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+    else if (reare==0)
+    {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
+    else {
+     printf("Resultado: Empate\n");
+    }
+    break;
  printf("------------------------ \n");
+ case 3:
     //atributo pib
     printf("Atributo: Pib\n");
     printf("Carta 1 - %s (%s): %.2f bilhões de Reais\n ",cidade1,cod1,pib1);
     printf("Carta 2 - %s (%s): %.2f bilhões de Reais\n",cidade2,cod2,pib2);
     if(repib==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+    else if (repib==0)
+    {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
+    else {
+     printf("Resultado: Empate\n");
+    }
  printf("------------------------ \n");
+ break;
+ case 4:
     //atributo pontos turisticos
     printf("Atributo: Pontos Turisticos\n");
     printf("Carta 1 - %s (%s): %d\n",cidade1,cod1,turist1);
     printf("Carta 2 - %s (%s): %d\n",cidade2,cod2,turist2);
     if(repotu==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+    else if (repotu==0)
+    {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
+    else {
+     printf("Resultado: Empate\n");
+    }
  printf("------------------------ \n");
+ break;
+ case 5:
      //atributo pib per capital
      printf("Atributo: Pib Per Capital\n");
     printf("Carta 1 - %s (%s): %.2f Reais\n",cidade1,cod1,pibc1);
     printf("Carta 2 - %s (%s): %.2f Reais\n",cidade2,cod2,pibc2);
     if(repibc==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+    else if (repibc==0) 
+    {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
+    else {
+     printf("Resultado: Empate\n");
+    }
  printf("------------------------ \n");
+ break;
+ case 6:
     //atributo densidade populacional
      printf("Atributo: Densidade Populacinal\n");
     printf("Carta 1 - %s (%s): %.2f hab/km²\n",cidade1,cod1,dpopu1);
     printf("Carta 2 - %s (%s): %.2f hab/km²\n",cidade2,cod2,dpopu2);
     if(redepo==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+    else if (redepo==0)
+    {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
+    else {
+     printf("Resultado: Empate\n");
+    }
  printf("------------------------ \n");
+ break;
+ case 7:
      //atributo super poder
      printf("Atributo: Super Poder\n");
     printf("Carta 1 - %s (%s): %.2f poder\n",cidade1,cod1,pop1+pib1+area1+pibc1+(1/dpopu1));
     printf("Carta 2 - %s (%s): %.2f poder\n",cidade2,cod2,pop2+pib2+area2+pibc2+(1/dpopu2));
     if(resuper==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else{printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
-           
-          printf("------------------------ \n");
-    
-
+    else if (resuper==0)
+    {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
+     else {
+     printf("Resultado: Empate\n");
+    }
+     printf("------------------------ \n");
+          break;
+     default:
+     printf("Codigo invalido./n");
+    break;
+}
 return(0);
        
 
