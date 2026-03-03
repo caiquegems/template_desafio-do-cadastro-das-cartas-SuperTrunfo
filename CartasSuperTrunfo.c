@@ -75,7 +75,8 @@ int main (){
         int repotu;
         int redepo;
         int repibc;
-        int resuper;
+        int resuper1;
+        int resuper2;
     
         repop = pop1 > pop2;
         reare = area1 > area2;
@@ -83,7 +84,8 @@ int main (){
         repotu = turist1 > turist2;
         redepo = dpopu1 < dpopu2;
         repibc = pibc1 > pibc2;
-        resuper = (pop1+pib1+area1+pibc1+(1/dpopu1))>(pop2+pib2+area2+pibc2+(1/dpopu2));
+        resuper1 = pop1+pib1+area1+pibc1+(1/dpopu1);
+        resuper2 = pop2+pib2+area2+pibc2+(1/dpopu2);
 
 
 
@@ -133,11 +135,12 @@ case 1:
     printf("Atributo: população\n");
     printf("Carta 1 - %s (%s): %lu Hab\n",cidade1,cod1,pop1);
     printf("Carta 2 - %s (%s): %lu Hab\n",cidade2,cod2,pop2);
-    if(repop==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else if (repop==0)
+    if(pop1 > pop2){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else if (pop1 < pop2)
     {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
     else {
      printf("Resultado: Empate");
+    }
      break;
  case 2:
     
@@ -145,8 +148,8 @@ case 1:
     printf("Atributo: Área\n");
     printf("Carta 1 - %s (%s): %f km\n",cidade1,cod1,area1);
     printf("Carta 2 - %s (%s): %f km \n",cidade2,cod2,area2);
-    if(reare==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else if (reare==0)
+    if(area1 > area2){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else if (area1 < area2)
     {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
     else {
      printf("Resultado: Empate\n");
@@ -158,8 +161,8 @@ case 1:
     printf("Atributo: Pib\n");
     printf("Carta 1 - %s (%s): %.2f bilhões de Reais\n ",cidade1,cod1,pib1);
     printf("Carta 2 - %s (%s): %.2f bilhões de Reais\n",cidade2,cod2,pib2);
-    if(repib==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else if (repib==0)
+    if(pib1 > pib2){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else if (pib1 < pib2)
     {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
     else {
      printf("Resultado: Empate\n");
@@ -171,8 +174,8 @@ case 1:
     printf("Atributo: Pontos Turisticos\n");
     printf("Carta 1 - %s (%s): %d\n",cidade1,cod1,turist1);
     printf("Carta 2 - %s (%s): %d\n",cidade2,cod2,turist2);
-    if(repotu==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else if (repotu==0)
+    if(turist1 > turist2){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else if (turist1 < turist2)
     {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
     else {
      printf("Resultado: Empate\n");
@@ -184,8 +187,8 @@ case 1:
      printf("Atributo: Pib Per Capital\n");
     printf("Carta 1 - %s (%s): %.2f Reais\n",cidade1,cod1,pibc1);
     printf("Carta 2 - %s (%s): %.2f Reais\n",cidade2,cod2,pibc2);
-    if(repibc==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else if (repibc==0) 
+    if(pibc1 > pibc2){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else if (pibc1 < pibc2) 
     {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
     else {
      printf("Resultado: Empate\n");
@@ -197,8 +200,8 @@ case 1:
      printf("Atributo: Densidade Populacinal\n");
     printf("Carta 1 - %s (%s): %.2f hab/km²\n",cidade1,cod1,dpopu1);
     printf("Carta 2 - %s (%s): %.2f hab/km²\n",cidade2,cod2,dpopu2);
-    if(redepo==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else if (redepo==0)
+    if(dpopu1 < dpopu2){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else if (dpopu1 > dpopu2)
     {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);} 
     else {
      printf("Resultado: Empate\n");
@@ -210,8 +213,8 @@ case 1:
      printf("Atributo: Super Poder\n");
     printf("Carta 1 - %s (%s): %.2f poder\n",cidade1,cod1,pop1+pib1+area1+pibc1+(1/dpopu1));
     printf("Carta 2 - %s (%s): %.2f poder\n",cidade2,cod2,pop2+pib2+area2+pibc2+(1/dpopu2));
-    if(resuper==1){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
-    else if (resuper==0)
+    if(resuper1 > resuper2){printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);}
+    else if (resuper1 < resuper2)
     {printf("Resultado: Carta 2 (%s) venceu!!\n",cidade2);}
      else {
      printf("Resultado: Empate\n");
@@ -221,8 +224,8 @@ case 1:
      default:
      printf("Codigo invalido./n");
     break;
-}
-return(0);
-       
+   
 
-} 
+   return(0);
+}
+}
