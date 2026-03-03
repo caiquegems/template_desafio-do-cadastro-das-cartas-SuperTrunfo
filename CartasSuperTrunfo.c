@@ -140,7 +140,7 @@ switch (tipo)
  printf("4. Pontos Turisticos\n");
  printf("5. PIB Per Capital\n");
  printf("6. Densidade Populasional\n");
- printf("6. Super Poder\n");
+ printf("7. Super Poder\n");
  printf("Qual a sua escolha?\n");
  scanf("%d", &escolhadeatributo1);
  printf("------------------------ \n");
